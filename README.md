@@ -75,21 +75,11 @@ The following files **MUST NOT** be committed to Git:
 | `dist/` / `build/` | Production build output bundles |
 | `*.log` | Runtime debug logs |
 
-### Safe Key Management Workflow
-
-1. Keep public templates in repository using **`.env.example`** with placeholder variables:
-   ```env
-   VITE_SUPABASE_URL=https://your-project.supabase.co
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
-   ```
-2. Store your local keys strictly in **`.env`** (which is ignored by Git in `.gitignore`).
-
 ---
 
 ## 🗄️ Supabase Database Setup
 
-Execute the following SQL script in your **Supabase SQL Editor** (`https://supabase.com/dashboard/project/<your-project-id>/sql`):
-
+Execute the following SQL script in your **Supabase SQL Editor** 
 ```sql
 -- 1. Create attendance_logs table
 create table if not exists attendance_logs (
@@ -150,10 +140,6 @@ Attendance logs/
 
 2. Open `.env` and fill in your Supabase credentials:
    ```env
-   VITE_SUPABASE_URL=https://mpozrtqkobyaopqbnlrf.supabase.co
-   VITE_SUPABASE_ANON_KEY=your_actual_supabase_anon_key_here
-   ```
-
 ---
 
 ## 🔑 Admin Access & Passcode
