@@ -47,7 +47,7 @@ export default function App() {
 
       {/* Modern Uncluttered Footer */}
       <footer className="py-6 border-t border-slate-200 bg-white text-center text-xs text-slate-400">
-        <p>© {new Date().getFullYear()} Trainer Attendance Tracker. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Skill them Young Trianer Attendance Tracker. All rights reserved.</p>
       </footer>
     </div>
   );
