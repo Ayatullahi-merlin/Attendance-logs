@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { UserCheck, LayoutDashboard, Lock, LogOut } from 'lucide-react';
 import AdminAuthModal from './AdminAuthModal';
+import orokiLogo from '../assets/oroki-hub-logo.jpg';
 
 export default function Header({ isAdminAuthenticated, setIsAdminAuthenticated }) {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -31,12 +32,12 @@ export default function Header({ isAdminAuthenticated, setIsAdminAuthenticated }
   return (
     <header className="w-full bg-white border-b border-slate-200 shadow-sm py-6 px-4 mb-8">
       <div className="max-w-5xl mx-auto flex flex-col items-center justify-center">
-        {/* Logo Placeholder */}
-        <div className="mb-4">
+        {/* Company Logo */}
+        <div className="mb-4 flex justify-center">
           <img
-            src="https://via.placeholder.com/180x50?text=YOUR+LOGO+HERE"
-            alt="Company Logo"
-            className="h-12 w-auto object-contain transition-opacity hover:opacity-90 cursor-pointer"
+            src={orokiLogo}
+            alt="ÒRÒKÍ HUB Logo"
+            className="h-16 md:h-20 w-auto object-contain rounded-xl shadow-md transition-all hover:scale-105 hover:shadow-lg cursor-pointer"
             onClick={() => navigate('/')}
             id="company-logo"
           />
