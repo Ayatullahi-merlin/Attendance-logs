@@ -15,7 +15,7 @@ export default function AdminAuthModal({ isOpen, onClose, onSuccess }) {
       setPasscode('');
       onSuccess();
     } else {
-      setError('Invalid Admin Passcode. (Default demo PIN is: admin123)');
+      setError('Invalid Admin Passcode.');
     }
   };
 
@@ -56,7 +56,7 @@ export default function AdminAuthModal({ isOpen, onClose, onSuccess }) {
               <KeyRound className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="password"
-                placeholder="Enter passcode (admin123)"
+                placeholder="Enter passcode"
                 value={passcode}
                 onChange={(e) => setPasscode(e.target.value)}
                 autoFocus
